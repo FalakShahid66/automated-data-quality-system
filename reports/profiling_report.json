@@ -1,0 +1,728 @@
+{
+  "source_directory": "data/raw",
+  "tables": {
+    "account_statuses": {
+      "table": "account_statuses",
+      "row_count": 3,
+      "column_count": 2,
+      "duplicate_row_count": 0,
+      "duplicate_row_pct": 0.0,
+      "flagged_pii_columns": [],
+      "columns": {
+        "AccountStatusID": {
+          "dtype": "int64",
+          "semantic_type": "identifier",
+          "is_likely_pii": false,
+          "missing_count": 0,
+          "missing_pct": 0.0,
+          "unique_count": 3,
+          "unique_pct": 100.0,
+          "is_mixed_type": false,
+          "stats": {
+            "min": 1.0,
+            "max": 3.0,
+            "mean": 2.0,
+            "std": 1.0
+          }
+        },
+        "StatusName": {
+          "dtype": "str",
+          "semantic_type": "name",
+          "is_likely_pii": false,
+          "missing_count": 0,
+          "missing_pct": 0.0,
+          "unique_count": 3,
+          "unique_pct": 100.0,
+          "is_mixed_type": false
+        }
+      }
+    },
+    "account_types": {
+      "table": "account_types",
+      "row_count": 5,
+      "column_count": 2,
+      "duplicate_row_count": 0,
+      "duplicate_row_pct": 0.0,
+      "flagged_pii_columns": [],
+      "columns": {
+        "AccountTypeID": {
+          "dtype": "int64",
+          "semantic_type": "identifier",
+          "is_likely_pii": false,
+          "missing_count": 0,
+          "missing_pct": 0.0,
+          "unique_count": 5,
+          "unique_pct": 100.0,
+          "is_mixed_type": false,
+          "stats": {
+            "min": 1.0,
+            "max": 5.0,
+            "mean": 3.0,
+            "std": 1.5811
+          }
+        },
+        "TypeName": {
+          "dtype": "str",
+          "semantic_type": "name",
+          "is_likely_pii": false,
+          "missing_count": 0,
+          "missing_pct": 0.0,
+          "unique_count": 5,
+          "unique_pct": 100.0,
+          "is_mixed_type": false
+        }
+      }
+    },
+    "accounts": {
+      "table": "accounts",
+      "row_count": 1667,
+      "column_count": 6,
+      "duplicate_row_count": 16,
+      "duplicate_row_pct": 0.96,
+      "flagged_pii_columns": [],
+      "columns": {
+        "AccountID": {
+          "dtype": "int64",
+          "semantic_type": "identifier",
+          "is_likely_pii": false,
+          "missing_count": 0,
+          "missing_pct": 0.0,
+          "unique_count": 1651,
+          "unique_pct": 99.04,
+          "is_mixed_type": false,
+          "stats": {
+            "min": 200000.0,
+            "max": 201650.0,
+            "mean": 200823.1848,
+            "std": 476.914
+          }
+        },
+        "CustomerID": {
+          "dtype": "int64",
+          "semantic_type": "identifier",
+          "is_likely_pii": false,
+          "missing_count": 0,
+          "missing_pct": 0.0,
+          "unique_count": 862,
+          "unique_pct": 51.71,
+          "is_mixed_type": false,
+          "stats": {
+            "min": 10000.0,
+            "max": 11099.0,
+            "mean": 10550.4445,
+            "std": 311.3053
+          }
+        },
+        "AccountTypeID": {
+          "dtype": "int64",
+          "semantic_type": "identifier",
+          "is_likely_pii": false,
+          "missing_count": 0,
+          "missing_pct": 0.0,
+          "unique_count": 5,
+          "unique_pct": 0.3,
+          "is_mixed_type": false,
+          "stats": {
+            "min": 1.0,
+            "max": 5.0,
+            "mean": 3.0468,
+            "std": 1.41
+          }
+        },
+        "AccountStatusID": {
+          "dtype": "int64",
+          "semantic_type": "identifier",
+          "is_likely_pii": false,
+          "missing_count": 0,
+          "missing_pct": 0.0,
+          "unique_count": 3,
+          "unique_pct": 0.18,
+          "is_mixed_type": false,
+          "stats": {
+            "min": 1.0,
+            "max": 3.0,
+            "mean": 1.2442,
+            "std": 0.5264
+          }
+        },
+        "Balance": {
+          "dtype": "float64",
+          "semantic_type": "monetary",
+          "is_likely_pii": false,
+          "missing_count": 0,
+          "missing_pct": 0.0,
+          "unique_count": 1651,
+          "unique_pct": 99.04,
+          "is_mixed_type": false,
+          "stats": {
+            "min": -486.68,
+            "max": 99828.98,
+            "mean": 49072.4739,
+            "std": 29191.9173
+          }
+        },
+        "OpeningDate": {
+          "dtype": "str",
+          "semantic_type": "date",
+          "is_likely_pii": false,
+          "missing_count": 33,
+          "missing_pct": 1.98,
+          "unique_count": 1000,
+          "unique_pct": 59.99,
+          "is_mixed_type": false
+        }
+      }
+    },
+    "addresses": {
+      "table": "addresses",
+      "row_count": 1222,
+      "column_count": 4,
+      "duplicate_row_count": 12,
+      "duplicate_row_pct": 0.98,
+      "flagged_pii_columns": [
+        "AddressID",
+        "Street",
+        "City"
+      ],
+      "columns": {
+        "AddressID": {
+          "dtype": "int64",
+          "semantic_type": "identifier",
+          "is_likely_pii": true,
+          "missing_count": 0,
+          "missing_pct": 0.0,
+          "unique_count": 1210,
+          "unique_pct": 99.02,
+          "is_mixed_type": false,
+          "stats": {
+            "min": 1.0,
+            "max": 1210.0,
+            "mean": 603.7324,
+            "std": 349.5264
+          }
+        },
+        "Street": {
+          "dtype": "str",
+          "semantic_type": "address_component",
+          "is_likely_pii": true,
+          "missing_count": 24,
+          "missing_pct": 1.96,
+          "unique_count": 958,
+          "unique_pct": 78.4,
+          "is_mixed_type": false
+        },
+        "City": {
+          "dtype": "str",
+          "semantic_type": "address_component",
+          "is_likely_pii": true,
+          "missing_count": 26,
+          "missing_pct": 2.13,
+          "unique_count": 870,
+          "unique_pct": 71.19,
+          "is_mixed_type": false
+        },
+        "Country": {
+          "dtype": "str",
+          "semantic_type": "address_component",
+          "is_likely_pii": false,
+          "missing_count": 24,
+          "missing_pct": 1.96,
+          "unique_count": 11,
+          "unique_pct": 0.9,
+          "is_mixed_type": false
+        }
+      }
+    },
+    "branches": {
+      "table": "branches",
+      "row_count": 50,
+      "column_count": 3,
+      "duplicate_row_count": 0,
+      "duplicate_row_pct": 0.0,
+      "flagged_pii_columns": [
+        "AddressID"
+      ],
+      "columns": {
+        "BranchID": {
+          "dtype": "int64",
+          "semantic_type": "identifier",
+          "is_likely_pii": false,
+          "missing_count": 0,
+          "missing_pct": 0.0,
+          "unique_count": 50,
+          "unique_pct": 100.0,
+          "is_mixed_type": false,
+          "stats": {
+            "min": 1.0,
+            "max": 50.0,
+            "mean": 25.5,
+            "std": 14.5774
+          }
+        },
+        "BranchName": {
+          "dtype": "str",
+          "semantic_type": "name",
+          "is_likely_pii": false,
+          "missing_count": 0,
+          "missing_pct": 0.0,
+          "unique_count": 50,
+          "unique_pct": 100.0,
+          "is_mixed_type": false
+        },
+        "AddressID": {
+          "dtype": "int64",
+          "semantic_type": "identifier",
+          "is_likely_pii": true,
+          "missing_count": 0,
+          "missing_pct": 0.0,
+          "unique_count": 50,
+          "unique_pct": 100.0,
+          "is_mixed_type": false,
+          "stats": {
+            "min": 21.0,
+            "max": 1210.0,
+            "mean": 538.44,
+            "std": 363.9668
+          }
+        }
+      }
+    },
+    "customer_types": {
+      "table": "customer_types",
+      "row_count": 3,
+      "column_count": 2,
+      "duplicate_row_count": 0,
+      "duplicate_row_pct": 0.0,
+      "flagged_pii_columns": [],
+      "columns": {
+        "CustomerTypeID": {
+          "dtype": "int64",
+          "semantic_type": "identifier",
+          "is_likely_pii": false,
+          "missing_count": 0,
+          "missing_pct": 0.0,
+          "unique_count": 3,
+          "unique_pct": 100.0,
+          "is_mixed_type": false,
+          "stats": {
+            "min": 1.0,
+            "max": 3.0,
+            "mean": 2.0,
+            "std": 1.0
+          }
+        },
+        "TypeName": {
+          "dtype": "str",
+          "semantic_type": "name",
+          "is_likely_pii": false,
+          "missing_count": 0,
+          "missing_pct": 0.0,
+          "unique_count": 3,
+          "unique_pct": 100.0,
+          "is_mixed_type": false
+        }
+      }
+    },
+    "customers": {
+      "table": "customers",
+      "row_count": 1111,
+      "column_count": 6,
+      "duplicate_row_count": 11,
+      "duplicate_row_pct": 0.99,
+      "flagged_pii_columns": [
+        "FirstName",
+        "LastName",
+        "DateOfBirth",
+        "AddressID"
+      ],
+      "columns": {
+        "CustomerID": {
+          "dtype": "int64",
+          "semantic_type": "identifier",
+          "is_likely_pii": false,
+          "missing_count": 0,
+          "missing_pct": 0.0,
+          "unique_count": 1100,
+          "unique_pct": 99.01,
+          "is_mixed_type": false,
+          "stats": {
+            "min": 10000.0,
+            "max": 11099.0,
+            "mean": 10550.5599,
+            "std": 318.4542
+          }
+        },
+        "FirstName": {
+          "dtype": "str",
+          "semantic_type": "name",
+          "is_likely_pii": true,
+          "missing_count": 22,
+          "missing_pct": 1.98,
+          "unique_count": 911,
+          "unique_pct": 82.0,
+          "is_mixed_type": false
+        },
+        "LastName": {
+          "dtype": "str",
+          "semantic_type": "name",
+          "is_likely_pii": true,
+          "missing_count": 23,
+          "missing_pct": 2.07,
+          "unique_count": 680,
+          "unique_pct": 61.21,
+          "is_mixed_type": false
+        },
+        "DateOfBirth": {
+          "dtype": "str",
+          "semantic_type": "date",
+          "is_likely_pii": true,
+          "missing_count": 0,
+          "missing_pct": 0.0,
+          "unique_count": 1039,
+          "unique_pct": 93.52,
+          "is_mixed_type": false
+        },
+        "AddressID": {
+          "dtype": "int64",
+          "semantic_type": "identifier",
+          "is_likely_pii": true,
+          "missing_count": 0,
+          "missing_pct": 0.0,
+          "unique_count": 720,
+          "unique_pct": 64.81,
+          "is_mixed_type": false,
+          "stats": {
+            "min": 1.0,
+            "max": 1210.0,
+            "mean": 615.4707,
+            "std": 347.5993
+          }
+        },
+        "CustomerTypeID": {
+          "dtype": "int64",
+          "semantic_type": "identifier",
+          "is_likely_pii": false,
+          "missing_count": 0,
+          "missing_pct": 0.0,
+          "unique_count": 3,
+          "unique_pct": 0.27,
+          "is_mixed_type": false,
+          "stats": {
+            "min": 1.0,
+            "max": 3.0,
+            "mean": 2.0441,
+            "std": 0.8235
+          }
+        }
+      }
+    },
+    "loan_statuses": {
+      "table": "loan_statuses",
+      "row_count": 3,
+      "column_count": 2,
+      "duplicate_row_count": 0,
+      "duplicate_row_pct": 0.0,
+      "flagged_pii_columns": [],
+      "columns": {
+        "LoanStatusID": {
+          "dtype": "int64",
+          "semantic_type": "identifier",
+          "is_likely_pii": false,
+          "missing_count": 0,
+          "missing_pct": 0.0,
+          "unique_count": 3,
+          "unique_pct": 100.0,
+          "is_mixed_type": false,
+          "stats": {
+            "min": 1.0,
+            "max": 3.0,
+            "mean": 2.0,
+            "std": 1.0
+          }
+        },
+        "StatusName": {
+          "dtype": "str",
+          "semantic_type": "name",
+          "is_likely_pii": false,
+          "missing_count": 0,
+          "missing_pct": 0.0,
+          "unique_count": 3,
+          "unique_pct": 100.0,
+          "is_mixed_type": false
+        }
+      }
+    },
+    "loans": {
+      "table": "loans",
+      "row_count": 333,
+      "column_count": 7,
+      "duplicate_row_count": 3,
+      "duplicate_row_pct": 0.9,
+      "flagged_pii_columns": [],
+      "columns": {
+        "LoanID": {
+          "dtype": "int64",
+          "semantic_type": "identifier",
+          "is_likely_pii": false,
+          "missing_count": 0,
+          "missing_pct": 0.0,
+          "unique_count": 330,
+          "unique_pct": 99.1,
+          "is_mixed_type": false,
+          "stats": {
+            "min": 400000.0,
+            "max": 400329.0,
+            "mean": 400165.2462,
+            "std": 95.8759
+          }
+        },
+        "AccountID": {
+          "dtype": "int64",
+          "semantic_type": "identifier",
+          "is_likely_pii": false,
+          "missing_count": 0,
+          "missing_pct": 0.0,
+          "unique_count": 298,
+          "unique_pct": 89.49,
+          "is_mixed_type": false,
+          "stats": {
+            "min": 200002.0,
+            "max": 201643.0,
+            "mean": 200825.3514,
+            "std": 490.987
+          }
+        },
+        "LoanStatusID": {
+          "dtype": "int64",
+          "semantic_type": "identifier",
+          "is_likely_pii": false,
+          "missing_count": 0,
+          "missing_pct": 0.0,
+          "unique_count": 3,
+          "unique_pct": 0.9,
+          "is_mixed_type": false,
+          "stats": {
+            "min": 1.0,
+            "max": 3.0,
+            "mean": 1.3754,
+            "std": 0.6633
+          }
+        },
+        "PrincipalAmount": {
+          "dtype": "float64",
+          "semantic_type": "monetary",
+          "is_likely_pii": false,
+          "missing_count": 0,
+          "missing_pct": 0.0,
+          "unique_count": 330,
+          "unique_pct": 99.1,
+          "is_mixed_type": false,
+          "stats": {
+            "min": 1128.49,
+            "max": 99830.33,
+            "mean": 51780.5174,
+            "std": 28490.6635
+          }
+        },
+        "InterestRate": {
+          "dtype": "float64",
+          "semantic_type": "monetary",
+          "is_likely_pii": false,
+          "missing_count": 0,
+          "missing_pct": 0.0,
+          "unique_count": 288,
+          "unique_pct": 86.49,
+          "is_mixed_type": false,
+          "stats": {
+            "min": 0.0301,
+            "max": 0.15,
+            "mean": 0.0897,
+            "std": 0.0328
+          }
+        },
+        "StartDate": {
+          "dtype": "str",
+          "semantic_type": "date",
+          "is_likely_pii": false,
+          "missing_count": 6,
+          "missing_pct": 1.8,
+          "unique_count": 272,
+          "unique_pct": 81.68,
+          "is_mixed_type": false
+        },
+        "EstimatedEndDate": {
+          "dtype": "str",
+          "semantic_type": "date",
+          "is_likely_pii": false,
+          "missing_count": 6,
+          "missing_pct": 1.8,
+          "unique_count": 297,
+          "unique_pct": 89.19,
+          "is_mixed_type": false
+        }
+      }
+    },
+    "transaction_types": {
+      "table": "transaction_types",
+      "row_count": 4,
+      "column_count": 2,
+      "duplicate_row_count": 0,
+      "duplicate_row_pct": 0.0,
+      "flagged_pii_columns": [],
+      "columns": {
+        "TransactionTypeID": {
+          "dtype": "int64",
+          "semantic_type": "identifier",
+          "is_likely_pii": false,
+          "missing_count": 0,
+          "missing_pct": 0.0,
+          "unique_count": 4,
+          "unique_pct": 100.0,
+          "is_mixed_type": false,
+          "stats": {
+            "min": 1.0,
+            "max": 4.0,
+            "mean": 2.5,
+            "std": 1.291
+          }
+        },
+        "TypeName": {
+          "dtype": "str",
+          "semantic_type": "name",
+          "is_likely_pii": false,
+          "missing_count": 0,
+          "missing_pct": 0.0,
+          "unique_count": 4,
+          "unique_pct": 100.0,
+          "is_mixed_type": false
+        }
+      }
+    },
+    "transactions": {
+      "table": "transactions",
+      "row_count": 50000,
+      "column_count": 8,
+      "duplicate_row_count": 500,
+      "duplicate_row_pct": 1.0,
+      "flagged_pii_columns": [],
+      "columns": {
+        "TransactionID": {
+          "dtype": "int64",
+          "semantic_type": "identifier",
+          "is_likely_pii": false,
+          "missing_count": 0,
+          "missing_pct": 0.0,
+          "unique_count": 49500,
+          "unique_pct": 99.0,
+          "is_mixed_type": false,
+          "stats": {
+            "min": 3000000.0,
+            "max": 3049499.0,
+            "mean": 3024759.0909,
+            "std": 14295.5779
+          }
+        },
+        "AccountOriginID": {
+          "dtype": "int64",
+          "semantic_type": "identifier",
+          "is_likely_pii": false,
+          "missing_count": 0,
+          "missing_pct": 0.0,
+          "unique_count": 1651,
+          "unique_pct": 3.3,
+          "is_mixed_type": false,
+          "stats": {
+            "min": 200000.0,
+            "max": 201650.0,
+            "mean": 200823.5062,
+            "std": 477.016
+          }
+        },
+        "AccountDestinationID": {
+          "dtype": "int64",
+          "semantic_type": "identifier",
+          "is_likely_pii": false,
+          "missing_count": 0,
+          "missing_pct": 0.0,
+          "unique_count": 1651,
+          "unique_pct": 3.3,
+          "is_mixed_type": false,
+          "stats": {
+            "min": 200000.0,
+            "max": 201650.0,
+            "mean": 200819.7355,
+            "std": 476.3073
+          }
+        },
+        "TransactionTypeID": {
+          "dtype": "int64",
+          "semantic_type": "identifier",
+          "is_likely_pii": false,
+          "missing_count": 0,
+          "missing_pct": 0.0,
+          "unique_count": 4,
+          "unique_pct": 0.01,
+          "is_mixed_type": false,
+          "stats": {
+            "min": 1.0,
+            "max": 4.0,
+            "mean": 2.1943,
+            "std": 0.9828
+          }
+        },
+        "Amount": {
+          "dtype": "float64",
+          "semantic_type": "monetary",
+          "is_likely_pii": false,
+          "missing_count": 0,
+          "missing_pct": 0.0,
+          "unique_count": 47180,
+          "unique_pct": 94.36,
+          "is_mixed_type": false,
+          "stats": {
+            "min": 1.01,
+            "max": 4999.59,
+            "mean": 2503.892,
+            "std": 1442.819
+          }
+        },
+        "TransactionDate": {
+          "dtype": "str",
+          "semantic_type": "date",
+          "is_likely_pii": false,
+          "missing_count": 1000,
+          "missing_pct": 2.0,
+          "unique_count": 26726,
+          "unique_pct": 53.45,
+          "is_mixed_type": false
+        },
+        "BranchID": {
+          "dtype": "int64",
+          "semantic_type": "identifier",
+          "is_likely_pii": false,
+          "missing_count": 0,
+          "missing_pct": 0.0,
+          "unique_count": 50,
+          "unique_pct": 0.1,
+          "is_mixed_type": false,
+          "stats": {
+            "min": 1.0,
+            "max": 50.0,
+            "mean": 25.6076,
+            "std": 14.48
+          }
+        },
+        "Description": {
+          "dtype": "str",
+          "semantic_type": "text",
+          "is_likely_pii": false,
+          "missing_count": 0,
+          "missing_pct": 0.0,
+          "unique_count": 49411,
+          "unique_pct": 98.82,
+          "is_mixed_type": false
+        }
+      }
+    }
+  }
+}
