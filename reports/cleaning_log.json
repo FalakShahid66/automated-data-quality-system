@@ -1,0 +1,133 @@
+{
+  "tables": {
+    "account_statuses": {
+      "table": "account_statuses",
+      "rows_before": 3,
+      "rows_after": 3,
+      "duplicate_rows_removed": 0,
+      "quality_score_before": 100.0,
+      "quality_score_after": 100.0,
+      "quality_delta": 0.0,
+      "actions": []
+    },
+    "account_types": {
+      "table": "account_types",
+      "rows_before": 5,
+      "rows_after": 5,
+      "duplicate_rows_removed": 0,
+      "quality_score_before": 100.0,
+      "quality_score_after": 100.0,
+      "quality_delta": 0.0,
+      "actions": []
+    },
+    "accounts": {
+      "table": "accounts",
+      "rows_before": 1667,
+      "rows_after": 1651,
+      "duplicate_rows_removed": 16,
+      "quality_score_before": 98.71,
+      "quality_score_after": 100.0,
+      "quality_delta": 1.29,
+      "actions": [
+        "Dropped 16 exact duplicate row(s).",
+        "Filled 33 missing value(s) in 'OpeningDate' with 'UNKNOWN'."
+      ]
+    },
+    "addresses": {
+      "table": "addresses",
+      "rows_before": 1222,
+      "rows_after": 1210,
+      "duplicate_rows_removed": 12,
+      "quality_score_before": 97.5,
+      "quality_score_after": 100.0,
+      "quality_delta": 2.5,
+      "actions": [
+        "Dropped 12 exact duplicate row(s).",
+        "Filled 24 missing value(s) in 'Street' with 'UNKNOWN'.",
+        "Filled 24 missing value(s) in 'City' with 'UNKNOWN'.",
+        "Filled 24 missing value(s) in 'Country' with 'UNKNOWN'."
+      ]
+    },
+    "branches": {
+      "table": "branches",
+      "rows_before": 50,
+      "rows_after": 50,
+      "duplicate_rows_removed": 0,
+      "quality_score_before": 100.0,
+      "quality_score_after": 100.0,
+      "quality_delta": 0.0,
+      "actions": []
+    },
+    "customer_types": {
+      "table": "customer_types",
+      "rows_before": 3,
+      "rows_after": 3,
+      "duplicate_rows_removed": 0,
+      "quality_score_before": 100.0,
+      "quality_score_after": 100.0,
+      "quality_delta": 0.0,
+      "actions": []
+    },
+    "customers": {
+      "table": "customers",
+      "rows_before": 1111,
+      "rows_after": 1100,
+      "duplicate_rows_removed": 11,
+      "quality_score_before": 98.33,
+      "quality_score_after": 100.0,
+      "quality_delta": 1.67,
+      "actions": [
+        "Dropped 11 exact duplicate row(s).",
+        "Filled 22 missing value(s) in 'FirstName' with 'UNKNOWN'.",
+        "Filled 22 missing value(s) in 'LastName' with 'UNKNOWN'."
+      ]
+    },
+    "loan_statuses": {
+      "table": "loan_statuses",
+      "rows_before": 3,
+      "rows_after": 3,
+      "duplicate_rows_removed": 0,
+      "quality_score_before": 100.0,
+      "quality_score_after": 100.0,
+      "quality_delta": 0.0,
+      "actions": []
+    },
+    "loans": {
+      "table": "loans",
+      "rows_before": 333,
+      "rows_after": 330,
+      "duplicate_rows_removed": 3,
+      "quality_score_before": 98.58,
+      "quality_score_after": 100.0,
+      "quality_delta": 1.42,
+      "actions": [
+        "Dropped 3 exact duplicate row(s).",
+        "Filled 6 missing value(s) in 'StartDate' with 'UNKNOWN'.",
+        "Filled 6 missing value(s) in 'EstimatedEndDate' with 'UNKNOWN'."
+      ]
+    },
+    "transaction_types": {
+      "table": "transaction_types",
+      "rows_before": 4,
+      "rows_after": 4,
+      "duplicate_rows_removed": 0,
+      "quality_score_before": 100.0,
+      "quality_score_after": 100.0,
+      "quality_delta": 0.0,
+      "actions": []
+    },
+    "transactions": {
+      "table": "transactions",
+      "rows_before": 50000,
+      "rows_after": 49500,
+      "duplicate_rows_removed": 500,
+      "quality_score_before": 98.75,
+      "quality_score_after": 100.0,
+      "quality_delta": 1.25,
+      "actions": [
+        "Dropped 500 exact duplicate row(s).",
+        "Filled 990 missing value(s) in 'TransactionDate' with 'UNKNOWN'."
+      ]
+    }
+  }
+}
